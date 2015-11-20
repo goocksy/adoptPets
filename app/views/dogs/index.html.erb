@@ -1,0 +1,9 @@
+<% @advertiments_dogs.each do |ad_dog| %>
+	<!-- Завернуть в красивый див  -->
+	<%= link_to(ad_dog) do %>
+		<p>
+			<strong><%= ad_dog.tittle %></strong>
+		</p>
+	<% end %>
+
+<% end %>

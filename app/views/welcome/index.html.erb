@@ -1,0 +1,7 @@
+<% @category.each do |category| %>
+	<%= link_to(controller: category.name+'s', action: 'index') do %>
+			<p><strong><%= category.name %></strong> </p>
+	<% end %>
+<% end %>
+
+

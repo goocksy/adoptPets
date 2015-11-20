@@ -1,0 +1,7 @@
+ru:
+  hello: "Hello world"
+  email: "Электронная почта"
+  name: "Имя"
+  phone: "Телефон"
+  password: "Пароль"
+  passwordConfirmation: "Подтвердите парль"

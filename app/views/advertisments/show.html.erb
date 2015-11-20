@@ -1,0 +1,42 @@
+<h3> <%= @advertisment.tittle %> </h3>
+<%= @advertisment.created_at %>
+
+<hr>
+
+
+<div class="slider" id="main-slider"><!-- outermost container element -->
+	<div class="slider-wrapper"><!-- innermost wrapper element -->
+		<div class="slide" ><%= image_tag @advertisment.image_url(:thumb) %></div><!-- slides -->
+		<div class="slide" ><%= image_tag @advertisment.image1_url(:thumb) %></div>
+		<div class="slide" ><%= image_tag @advertisment.image2_url(:thumb) %></div>
+		<div class="slide" ><%= image_tag @advertisment.image3_url(:thumb) %></div>
+	</div>
+	<div class="slider-nav"><!-- "Previous" and "Next" actions -->
+		<button class="slider-previous">Previous</button>
+		<button class="slider-next">Next</button>
+	</div>
+</div>	
+<p>Описание: <%= @advertisment.comment %> </p>
+<p>Цена:	<%= @advertisment.price %> </p>
+<p>Категория: <%= @advertisment.category.name %> </p>
+<hr>
+<p><h3> Комментарии </h3></p>
+<div class = "comments">
+		<% @advertisment.comments.each do |comment| %>
+			<hr>
+			<div class = "author" ><%= comment.user.name %></div>
+			<p><%= comment.text %></p>
+			<hr>
+		<% end %>
+</div>
+<h2>Добавить комментарий:</h2>
+<%= form_for([@advertisment, @advertisment.comments.build]) do |f| %>
+  <p>
+    <%= f.label :text %><br />
+    <%= f.text_area :text %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+<hr>
