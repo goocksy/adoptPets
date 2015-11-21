@@ -58,7 +58,11 @@
         <div class="col-md-10"></div>
         <div class="col-md-2">        
           <%= link_to(new_advertisment_path) do %>
-            <div class="btn btn-info">Добавить объявление</div>
+            <% unless current_user.present? %>
+              <div class="btn btn-info", onclick="alert('Войдите или зарегистрируйтесь')">Добавить объявление</div>
+            <% else %>
+              <div class="btn btn-info">Добавить объявление</div>
+            <% end %>
           <% end %>
         </div>
       </div>
