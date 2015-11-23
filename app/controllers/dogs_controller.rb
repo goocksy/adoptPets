@@ -1,7 +1,7 @@
 class DogsController < ApplicationController
 
 	def index
-		@advertiments_dogs = Advertisment.joins(:category).where(categories: {id: 1})
+		@advertiments_dogs = Advertisment.joins(:category).where(categories: {name: 'dog'})
 	end
 
 end
