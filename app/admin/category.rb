@@ -12,6 +12,6 @@ ActiveAdmin.register Category do
 #   permitted << :other if resource.something?
 #   permitted
 # end
-
+	permit_params :name
 
 end
