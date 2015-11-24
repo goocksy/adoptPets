@@ -5,7 +5,8 @@
 // the compiled file.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require advertisments.js.coffee
+//= require turbolinks
 //= require_tree .

@@ -6,7 +6,11 @@ class CommentsController < ApplicationController
       @comment = @advertisment.comments.new(comment_params)
       @comment.user_id = current_user.id
       @comment.save 
-      redirect_to advertisment_path(@advertisment)
+      #redirect_to advertisment_path(@advertisment)
+      respond_to do |format|
+        format.html {redirect_to advertisment_path(@advertisment)}
+        format.js # render comments/create.js.erb
+      end
     else
       redirect_to :back, :notice => "My notice"
     end

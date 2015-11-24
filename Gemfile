@@ -58,4 +58,5 @@ gem "twitter-bootstrap-rails"
 gem 'rmagick'
 gem 'carrierwave'
 gem 'activeadmin', github: 'activeadmin'
+gem 'jquery-turbolinks'
 

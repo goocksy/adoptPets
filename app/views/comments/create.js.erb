@@ -1,0 +1,3 @@
+$('#comments').append(" <hr><div class='author'><%= j @comment.user.name %></div><p><%= j @comment.text %></p><hr>")
+$('#comment_text').val("")
+$('#count').html(parseInt($("#count").text())+1);

@@ -8,6 +8,7 @@ class AdvertismentsController < ApplicationController
 
 	def show
 		@advertisment = Advertisment.where(id: params[:id]).first
+		@comments = Comment.where(advertisment_id: params[:id])
 	end
 
 	def new
